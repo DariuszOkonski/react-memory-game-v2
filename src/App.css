@@ -1,3 +1,77 @@
 .App {
-  background-color: yellow;
+  text-align: center;
+}
+
+.header {
+  font-size: 2.2rem;
+  font-weight: 100;
+  letter-spacing: 2px;
+}
+
+.turns {
+  margin: 20px 0;
+  letter-spacing: 2px;
+}
+
+.button {
+  border: 1px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  padding: 10px 15px;
+  font-size: 0.8rem;
+  font-weight: 100;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.button:hover {
+  background-color: rebeccapurple;
+}
+
+.cards-container {
+  /* background-color: yellow; */
+  padding: 5px;
+  margin: 25px auto;
+  max-width: 620px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 10px;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.card .front {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  transition: 0.4s linear;
+  transform: rotateY(0deg);
+}
+
+.card .front.hide {
+  transform: rotateY(90deg);
+}
+
+.card .back {
+  transition: 0.4s linear;
+  transform: rotateY(180deg);
+}
+
+.card .back.show {
+  transform: rotateY(0deg);
+}
+
+.card img {
+  width: 100%;
+  margin: 0;
 }
